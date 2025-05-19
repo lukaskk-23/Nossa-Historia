@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Nossa História</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffe0ec, #ffffff);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            padding: 40px 20px;
+        }
+        img {
+            max-width: 300px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #d63384;
+        }
+        .counter {
+            font-size: 22px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💖 Nossa História 💖</h1>
+        <img src="foto-casal.jpg" alt="Foto do casal">
+        <div class="counter" id="conhecemos"></div>
+        <div class="counter" id="primeiraVez"></div>
+        <div class="counter" id="namoro"></div>
+    </div>
+
+    <script>
+        function calcularDias(data) {
+            const hoje = new Date();
+            const dataAlvo = new Date(data);
+            const diffTime = hoje - dataAlvo;
+            return Math.floor(diffTime / (1000 * 60 * 60 * 24));
+        }
+
+        document.getElementById("conhecemos").innerText =
+            "Nos conhecemos há " + calcularDias("2024-12-08") + " dias.";
+        document.getElementById("primeiraVez").innerText =
+            "Nos vimos pela primeira vez há " + calcularDias("2025-01-13") + " dias.";
+        document.getElementById("namoro").innerText =
+            "Estamos namorando há " + calcularDias("2025-04-15") + " dias.";
+    </script>
+</body>
+</html>
